@@ -1,0 +1,2081 @@
+{
+    "us-patent-grant": {
+        "us-bibliographic-data-grant": {
+            "us-references-cited": {
+                "us-citation": [
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20060800", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Martin et al.", 
+                                "doc-number": "D526112"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20080300", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Brooking et al.", 
+                                "doc-number": "D563076"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20080400", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Brooking et al.", 
+                                "doc-number": "D565827"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090500", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Wilson et al.", 
+                                "doc-number": "D591927"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090600", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Kaiser et al.", 
+                                "doc-number": "D593276"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1121"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090600", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Hartmann et al.", 
+                                "doc-number": "D595027"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1121"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090700", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Loret et al.", 
+                                "doc-number": "D595477"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1121"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20100400", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Hartmann et al.", 
+                                "doc-number": "D613028"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1121"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20100500", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Loret et al.", 
+                                "doc-number": "D615727"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1121"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20110300", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Wilson et al.", 
+                                "doc-number": "D634508"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1121"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20110500", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Martin", 
+                                "doc-number": "D637787"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20120300", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Grolimund", 
+                                "doc-number": "D655066"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20120500", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Fujioka et al.", 
+                                "doc-number": "D659946"
+                            }
+                        }
+                    }
+                ]
+            }, 
+            "us-parties": {
+                "agents": {
+                    "agent": {
+                        "addressbook": {
+                            "orgname": "Arent Fox LLP", 
+                            "address": {
+                                "country": "unknown"
+                            }
+                        }
+                    }
+                }, 
+                "us-applicants": {
+                    "us-applicant": {
+                        "residence": {
+                            "country": "US"
+                        }, 
+                        "addressbook": {
+                            "orgname": "Mars, Incorporated", 
+                            "address": {
+                                "city": "McLean", 
+                                "state": "VA", 
+                                "country": "US"
+                            }
+                        }
+                    }
+                }, 
+                "inventors": {
+                    "inventor": [
+                        {
+                            "addressbook": {
+                                "first-name": "Timothy H.", 
+                                "last-name": "Moore", 
+                                "address": {
+                                    "city": "Warwick", 
+                                    "country": "GB"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Carsten W.", 
+                                "last-name": "Astheimer", 
+                                "address": {
+                                    "city": "Warwick", 
+                                    "country": "GB"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }, 
+            "us-term-of-grant": {
+                "length-of-grant": "14"
+            }, 
+            "us-exemplary-claim": "1", 
+            "assignees": {
+                "assignee": {
+                    "addressbook": {
+                        "orgname": "Mars, Inc.", 
+                        "role": "02", 
+                        "address": {
+                            "city": "McLean", 
+                            "state": "VA", 
+                            "country": "US"
+                        }
+                    }
+                }
+            }, 
+            "number-of-claims": "1", 
+            "classification-locarno": {
+                "edition": "10", 
+                "main-classification": "0101"
+            }, 
+            "classification-national": {
+                "country": "US", 
+                "main-classification": "D 1121"
+            }, 
+            "us-field-of-classification-search": {
+                "classification-national": [
+                    {
+                        "country": "US", 
+                        "additional-info": "unstructured", 
+                        "main-classification": "D 1100-130"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 1199"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426  5"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426104"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426249"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426275"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426660"
+                    }, 
+                    {
+                        "country": "US", 
+                        "additional-info": "unstructured", 
+                        "main-classification": "D24101-104"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "273429"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 9707"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D28  81"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D14433"
+                    }
+                ]
+            }, 
+            "figures": {
+                "number-of-figures": "7", 
+                "number-of-drawing-sheets": "5"
+            }, 
+            "examiners": {
+                "assistant-examiner": {
+                    "first-name": "Katie", 
+                    "last-name": "Mroczka"
+                }, 
+                "primary-examiner": {
+                    "department": "2911", 
+                    "first-name": "Deanna L", 
+                    "last-name": "Pratt"
+                }
+            }, 
+            "application-reference": {
+                "document-id": {
+                    "date": "20131016", 
+                    "country": "US", 
+                    "doc-number": "29469954"
+                }
+            }, 
+            "invention-title": "Confection", 
+            "publication-reference": {
+                "document-id": {
+                    "date": "20140909", 
+                    "country": "US", 
+                    "kind": "S1", 
+                    "doc-number": "D0712616"
+                }
+            }, 
+            "priority-claims": {
+                "priority-claim": {
+                    "date": "20130425", 
+                    "country": "EP", 
+                    "doc-number": "2227215-0001"
+                }
+            }, 
+            "us-application-series-code": "29"
+        }
+    }
+}
+{
+    "us-patent-grant": {
+        "us-bibliographic-data-grant": {
+            "us-references-cited": {
+                "us-citation": [
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426 94"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19220400", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Huston", 
+                                "doc-number": "1414022"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19670800", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Reinhart", 
+                                "doc-number": "D208397"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19731000", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Cammelot et al.", 
+                                "doc-number": "D228827"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1126"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19780600", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Pollano et al.", 
+                                "doc-number": "D248256"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19830800", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Arend", 
+                                "doc-number": "D270299"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19850100", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Arend", 
+                                "doc-number": "D277235"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1123"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19850400", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Watanabe", 
+                                "doc-number": "D278565"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1121"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20010300", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Kauffman et al.", 
+                                "doc-number": "D439392"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1125"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20050900", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Wilson et al.", 
+                                "doc-number": "D509044"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1125"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20060900", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Pafko", 
+                                "doc-number": "D527862"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426  5"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20060900", 
+                                "country": "US", 
+                                "kind": "B1", 
+                                "name": "McHale et al.", 
+                                "doc-number": "7112345"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1128"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090300", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Lehtinen", 
+                                "doc-number": "D589232"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1128"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090700", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Lehtinen", 
+                                "doc-number": "D596376"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20110700", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bruyea et al.", 
+                                "doc-number": "D641949"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20110700", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bruyea et al.", 
+                                "doc-number": "D641952"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1127"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20110800", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bruyea et al.", 
+                                "doc-number": "D644000"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1128"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20111100", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Andren et al.", 
+                                "doc-number": "D647687"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426637"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20050400", 
+                                "country": "US", 
+                                "kind": "A1", 
+                                "name": "Bakos", 
+                                "doc-number": "2005/0074537"
+                            }
+                        }
+                    }, 
+                    {
+                        "nplcit": {
+                            "othercit": "Striped Seaweed, Apr. 29, 2006. [online.] [retrieved on Feb. 27, 2014]. Retrieved from internet <URL: http://www.growing-algae.com/images/Nori.jpg>."
+                        }, 
+                        "category": "cited by examiner"
+                    }, 
+                    {
+                        "nplcit": {
+                            "othercit": "Black and White Striped Cookie, Dec. 8, 2007. [online.] [retrieved on Feb. 28, 2014]. Retrieved from internet <URL: http://www.bakeorbreak.com/wp-content/uploads/2007/12/bwcksO2.jpg>."
+                        }, 
+                        "category": "cited by examiner"
+                    }
+                ]
+            }, 
+            "us-parties": {
+                "agents": {
+                    "agent": {
+                        "addressbook": {
+                            "orgname": "Leydig, Voit & Mayer, Ltd.", 
+                            "address": {
+                                "country": "unknown"
+                            }
+                        }
+                    }
+                }, 
+                "us-applicants": {
+                    "us-applicant": {
+                        "residence": {
+                            "country": "KR"
+                        }, 
+                        "addressbook": {
+                            "orgname": "CJ Cheiljedang Corp.", 
+                            "address": {
+                                "city": "Seoul", 
+                                "country": "KR"
+                            }
+                        }
+                    }
+                }, 
+                "inventors": {
+                    "inventor": [
+                        {
+                            "addressbook": {
+                                "first-name": "Joo Dong", 
+                                "last-name": "Park", 
+                                "address": {
+                                    "city": "Gimpo-si", 
+                                    "country": "KR"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Su Yeon", 
+                                "last-name": "Chung", 
+                                "address": {
+                                    "city": "Seoul", 
+                                    "country": "KR"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Chang Youg", 
+                                "last-name": "Lee", 
+                                "address": {
+                                    "city": "Seoul", 
+                                    "country": "KR"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Jeong Seok", 
+                                "last-name": "An", 
+                                "address": {
+                                    "city": "Seoul", 
+                                    "country": "KR"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Soon Hee", 
+                                "last-name": "Kwon", 
+                                "address": {
+                                    "city": "Seongnam-si", 
+                                    "country": "KR"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Sung Woo", 
+                                "last-name": "Shine", 
+                                "address": {
+                                    "city": "Seoul", 
+                                    "country": "KR"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Sung Hee", 
+                                "last-name": "Kim", 
+                                "address": {
+                                    "city": "Seoul", 
+                                    "country": "KR"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "So Young", 
+                                "last-name": "Yoon", 
+                                "address": {
+                                    "city": "Seoul", 
+                                    "country": "KR"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }, 
+            "us-term-of-grant": {
+                "length-of-grant": "14"
+            }, 
+            "us-exemplary-claim": "1", 
+            "assignees": {
+                "assignee": {
+                    "addressbook": {
+                        "orgname": "CJ Cheiljedang Corp.", 
+                        "role": "03", 
+                        "address": {
+                            "city": "Seoul", 
+                            "country": "KR"
+                        }
+                    }
+                }
+            }, 
+            "number-of-claims": "1", 
+            "classification-locarno": {
+                "edition": "10", 
+                "main-classification": "0101"
+            }, 
+            "classification-national": {
+                "country": "US", 
+                "main-classification": "D 1125"
+            }, 
+            "us-field-of-classification-search": {
+                "classification-national": [
+                    {
+                        "country": "US", 
+                        "additional-info": "unstructured", 
+                        "main-classification": "D 1100-130"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 1199"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426104"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426108"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426138"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426391"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426549"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426808"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426 94"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426143"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426559"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426560"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 6597"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 6601"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 7359"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D21623"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D21803"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D21386"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "28  4"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "119710"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D25138"
+                    }
+                ]
+            }, 
+            "figures": {
+                "number-of-figures": "7", 
+                "number-of-drawing-sheets": "6"
+            }, 
+            "examiners": {
+                "assistant-examiner": {
+                    "first-name": "Katie", 
+                    "last-name": "Mroczka"
+                }, 
+                "primary-examiner": {
+                    "department": "2911", 
+                    "first-name": "Deanna L", 
+                    "last-name": "Pratt"
+                }
+            }, 
+            "application-reference": {
+                "document-id": {
+                    "date": "20121220", 
+                    "country": "US", 
+                    "doc-number": "29440244"
+                }
+            }, 
+            "invention-title": "Snack food", 
+            "publication-reference": {
+                "document-id": {
+                    "date": "20140909", 
+                    "country": "US", 
+                    "kind": "S1", 
+                    "doc-number": "D0712617"
+                }
+            }, 
+            "priority-claims": {
+                "priority-claim": {
+                    "date": "20121127", 
+                    "country": "KR", 
+                    "doc-number": "30-2012-0056795"
+                }
+            }, 
+            "us-application-series-code": "29"
+        }
+    }
+}
+{
+    "us-patent-grant": {
+        "us-bibliographic-data-grant": {
+            "us-references-cited": {
+                "us-citation": [
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426138"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19310400", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Blanchard", 
+                                "doc-number": "1802698"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "132273"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19600200", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "McGee", 
+                                "doc-number": "2924228"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426412"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19650400", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Culp", 
+                                "doc-number": "3180737"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D34 28"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19901200", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Elmas et al.", 
+                                "doc-number": "D313298"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D34 29"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19920100", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bruke", 
+                                "doc-number": "D323414"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D34 29"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19920600", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bruke", 
+                                "doc-number": "D326944"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426615"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19940300", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Mendenhall", 
+                                "doc-number": "5296252"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D21693"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19950900", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Rusk", 
+                                "doc-number": "D362703"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1101"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19981200", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Rom", 
+                                "doc-number": "D401735"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1125"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20020600", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bortone", 
+                                "doc-number": "D458434"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1125"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20040600", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bortone", 
+                                "doc-number": "D492087"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1125"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20050200", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Bortone", 
+                                "doc-number": "D501697"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D30160"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20060600", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Wang", 
+                                "doc-number": "D523191"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1125"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20120900", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Dixon", 
+                                "doc-number": "D666378"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D21803"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20130800", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Cheung", 
+                                "doc-number": "D688344"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1125"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20130800", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Walker et al.", 
+                                "doc-number": "D688437"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426143"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20080200", 
+                                "country": "US", 
+                                "kind": "A1", 
+                                "name": "Burgess et al.", 
+                                "doc-number": "2008/0038416"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426 92"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20111200", 
+                                "country": "US", 
+                                "kind": "A1", 
+                                "name": "Hogan et al.", 
+                                "doc-number": "2011/0311685"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by applicant", 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20130400", 
+                                "country": "US", 
+                                "kind": "A1", 
+                                "name": "Walker et al.", 
+                                "doc-number": "2013/0087032"
+                            }
+                        }
+                    }
+                ]
+            }, 
+            "us-parties": {
+                "agents": {
+                    "agent": {
+                        "addressbook": {
+                            "orgname": "Panitch Schwarze Belisario & Nadel LLP", 
+                            "address": {
+                                "country": "unknown"
+                            }
+                        }
+                    }
+                }, 
+                "us-applicants": {
+                    "us-applicant": {
+                        "residence": {
+                            "country": "CA"
+                        }, 
+                        "addressbook": {
+                            "orgname": "McCain Foods Limited", 
+                            "address": {
+                                "city": "Florenceville-Bristol", 
+                                "country": "CA"
+                            }
+                        }
+                    }
+                }, 
+                "inventors": {
+                    "inventor": [
+                        {
+                            "addressbook": {
+                                "first-name": "David M.", 
+                                "last-name": "Rogers", 
+                                "address": {
+                                    "city": "Woodstock", 
+                                    "country": "CA"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "John", 
+                                "last-name": "Aikens", 
+                                "address": {
+                                    "city": "New Maryland", 
+                                    "country": "CA"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }, 
+            "us-term-of-grant": {
+                "length-of-grant": "14"
+            }, 
+            "us-exemplary-claim": "1", 
+            "assignees": {
+                "assignee": {
+                    "addressbook": {
+                        "orgname": "McCain Foods Limited", 
+                        "role": "03", 
+                        "address": {
+                            "city": "Florenceville-Bristol", 
+                            "country": "CA"
+                        }
+                    }
+                }
+            }, 
+            "number-of-claims": "1", 
+            "classification-locarno": {
+                "edition": "10", 
+                "main-classification": "0101"
+            }, 
+            "classification-national": {
+                "country": "US", 
+                "main-classification": "D 1125"
+            }, 
+            "us-field-of-classification-search": {
+                "classification-national": [
+                    {
+                        "country": "US", 
+                        "additional-info": "unstructured", 
+                        "main-classification": "D 1100-130"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 1199"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426104"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426115"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426143"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426144"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426249"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426274"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426517"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426518"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426615"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426805"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D21386"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D25119"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D25121"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D30160"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D24102"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D24103"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D34 28"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D34 29"
+                    }
+                ]
+            }, 
+            "figures": {
+                "number-of-figures": "7", 
+                "number-of-drawing-sheets": "2"
+            }, 
+            "application-reference": {
+                "document-id": {
+                    "date": "20130530", 
+                    "country": "US", 
+                    "doc-number": "29456306"
+                }
+            }, 
+            "invention-title": "Root vegetable product", 
+            "publication-reference": {
+                "document-id": {
+                    "date": "20140909", 
+                    "country": "US", 
+                    "kind": "S1", 
+                    "doc-number": "D0712618"
+                }
+            }, 
+            "examiners": {
+                "assistant-examiner": {
+                    "first-name": "Katie", 
+                    "last-name": "Mroczka"
+                }, 
+                "primary-examiner": {
+                    "department": "2911", 
+                    "first-name": "Barbara", 
+                    "last-name": "Fox"
+                }
+            }, 
+            "us-application-series-code": "29"
+        }
+    }
+}
+{
+    "us-patent-grant": {
+        "us-bibliographic-data-grant": {
+            "us-references-cited": {
+                "us-citation": [
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426 87"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19330800", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Birdseye", 
+                                "doc-number": "1924903"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426133"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19370300", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Walter", 
+                                "doc-number": "2072660"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426550"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19701200", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Ghafoori", 
+                                "doc-number": "3545979"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426 94"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19720400", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Ball et al.", 
+                                "doc-number": "3656966"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19830700", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Zonnenberg", 
+                                "doc-number": "D269729"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426291"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19950700", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Kou", 
+                                "doc-number": "5431938"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426274"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19981200", 
+                                "country": "US", 
+                                "kind": "A", 
+                                "name": "Sawyer", 
+                                "doc-number": "5846586"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1106"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20020700", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Tenzer", 
+                                "doc-number": "D460601"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1123"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20040400", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Barry et al.", 
+                                "doc-number": "D488282"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426274"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20040400", 
+                                "country": "US", 
+                                "kind": "B1", 
+                                "name": "Rastogi", 
+                                "doc-number": "6723362"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1123"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20041100", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Mihalos et al.", 
+                                "doc-number": "D497702"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1106"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20060200", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "DeLoach", 
+                                "doc-number": "D515271"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20061000", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Ahmed et al.", 
+                                "doc-number": "D530484"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20061100", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Munday et al.", 
+                                "doc-number": "D532183"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20070900", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Ahmed et al.", 
+                                "doc-number": "D551426"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1129"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090100", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Forte", 
+                                "doc-number": "D585178"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 9542"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20111100", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Toh et al.", 
+                                "doc-number": "D649059"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1128"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20120300", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Zbuchalski", 
+                                "doc-number": "D655887"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "D 1199"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20130300", 
+                                "country": "US", 
+                                "kind": "S", 
+                                "name": "Gottardi B. Maia", 
+                                "doc-number": "D678656"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "99403"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20020400", 
+                                "country": "US", 
+                                "kind": "A1", 
+                                "name": "Stevenson et al.", 
+                                "doc-number": "2002/0043158"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by examiner", 
+                        "classification-national": {
+                            "country": "US", 
+                            "main-classification": "426 92"
+                        }, 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20090800", 
+                                "country": "US", 
+                                "kind": "A1", 
+                                "name": "Sosebee", 
+                                "doc-number": "2009/0196958"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by applicant", 
+                        "patcit": {
+                            "document-id": {
+                                "date": "19690100", 
+                                "country": "CA", 
+                                "doc-number": "31122"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by applicant", 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20100800", 
+                                "country": "NZ", 
+                                "doc-number": "11572"
+                            }
+                        }
+                    }, 
+                    {
+                        "category": "cited by applicant", 
+                        "patcit": {
+                            "document-id": {
+                                "date": "20100800", 
+                                "country": "NZ", 
+                                "doc-number": "11745"
+                            }
+                        }
+                    }, 
+                    {
+                        "nplcit": {
+                            "othercit": "Barbecue Drumstick Dog Treat, Jan. 22, 2013. [online.] [retrieved on Sep. 15, 2013]. Retrieved from internet <URL: http://www.etsy.com/listing/122402337/barbecue-drumstick-dog-treats?ref=market>."
+                        }, 
+                        "category": "cited by examiner"
+                    }, 
+                    {
+                        "nplcit": {
+                            "othercit": "Giant Barbecue Drumstick Dog Treat, Apr. 12, 2013. [online.] [retrieved on Sep. 15, 2013]. Retrieved from internet <URL: http://www.etsy.com/listing/129237979/giant-barbecue-drumstick-dog-treat?ref=market>."
+                        }, 
+                        "category": "cited by examiner"
+                    }
+                ]
+            }, 
+            "us-parties": {
+                "agents": {
+                    "agent": {
+                        "addressbook": {
+                            "orgname": "Young & Thompson", 
+                            "address": {
+                                "country": "unknown"
+                            }
+                        }
+                    }
+                }, 
+                "us-applicants": {
+                    "us-applicant": {
+                        "residence": {
+                            "country": "MX"
+                        }, 
+                        "addressbook": {
+                            "orgname": "Investigaci\u00f3n de Tecnologia Avanzada, S.A. de C.V.", 
+                            "address": {
+                                "city": "Guadalupe", 
+                                "country": "MX"
+                            }
+                        }
+                    }
+                }, 
+                "inventors": {
+                    "inventor": [
+                        {
+                            "addressbook": {
+                                "first-name": "Felipe A.", 
+                                "last-name": "Rubio", 
+                                "address": {
+                                    "city": "Guadalupe", 
+                                    "country": "MX"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Arturo", 
+                                "last-name": "Garcia", 
+                                "address": {
+                                    "city": "Guadalupe", 
+                                    "country": "MX"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Miguel A.", 
+                                "last-name": "Arce", 
+                                "address": {
+                                    "city": "Guadalupe", 
+                                    "country": "MX"
+                                }
+                            }
+                        }, 
+                        {
+                            "addressbook": {
+                                "first-name": "Rodrigo", 
+                                "last-name": "Lobeira", 
+                                "address": {
+                                    "city": "Guadalupe", 
+                                    "country": "MX"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }, 
+            "us-term-of-grant": {
+                "length-of-grant": "14"
+            }, 
+            "us-exemplary-claim": "1", 
+            "assignees": {
+                "assignee": {
+                    "addressbook": {
+                        "orgname": "Investigacion de Technologia Avanzada, S.A. de C.V.", 
+                        "role": "03", 
+                        "address": {
+                            "city": "Nuevo Leon", 
+                            "country": "MX"
+                        }
+                    }
+                }
+            }, 
+            "number-of-claims": "1", 
+            "classification-locarno": {
+                "edition": "10", 
+                "main-classification": "0101"
+            }, 
+            "classification-national": {
+                "country": "US", 
+                "main-classification": "D 1128"
+            }, 
+            "us-field-of-classification-search": {
+                "classification-national": [
+                    {
+                        "country": "US", 
+                        "additional-info": "unstructured", 
+                        "main-classification": "D 1100-130"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 1199"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426 92"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426 94"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426104"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426134"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426138"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426143"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426275"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426277"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426279"
+                    }, 
+                    {
+                        "country": "US", 
+                        "additional-info": "unstructured", 
+                        "main-classification": "426281-284"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426292"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426295"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426391"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426496"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426514"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426566"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426572"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "426660"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D11146"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D11154"
+                    }, 
+                    {
+                        "country": "US", 
+                        "additional-info": "unstructured", 
+                        "main-classification": "D 9542-554"
+                    }, 
+                    {
+                        "country": "US", 
+                        "main-classification": "D 9563"
+                    }
+                ]
+            }, 
+            "figures": {
+                "number-of-figures": "7", 
+                "number-of-drawing-sheets": "3"
+            }, 
+            "application-reference": {
+                "document-id": {
+                    "date": "20130131", 
+                    "country": "US", 
+                    "doc-number": "29444550"
+                }
+            }, 
+            "invention-title": "Snack product", 
+            "publication-reference": {
+                "document-id": {
+                    "date": "20140909", 
+                    "country": "US", 
+                    "kind": "S1", 
+                    "doc-number": "D0712619"
+                }
+            }, 
+            "examiners": {
+                "assistant-examiner": {
+                    "first-name": "Katie", 
+                    "last-name": "Mroczka"
+                }, 
+                "primary-examiner": {
+                    "department": "2911", 
+                    "first-name": "Cathron", 
+                    "last-name": "Brooks"
+                }
+            }, 
+            "us-application-series-code": "29"
+        }
+    }
+}
