@@ -4,15 +4,19 @@
  
 python patent_link_scraper.py | grep zip | grep -v pba > file_links.txt
 
-# next use wget to download all the files from the urls in file_links.txt
+# next use wget to download all the files from the urls in 
+# file_links.txt and put them in  a tmp directory for staging
 # note: the -q option can be used to suppress output in quiet mode
 
+mkdir -p /home/ubuntu/patents_project/ingest/zip
+cd zip
 wget $(cat file_links.txt)
 
 # the raw, full-fidelity, zip file are immediately put into HDFS for safe
-# storage
+# storage, after creating the required directories
 
+hdfs dfs -mkdir -p /user/ubuntu/data/raw_patents
 hdfs dfs -put *.zip /user/ubuntu/data/raw_patents
 
-# Unfortunately, the zip format is not splittable and we will
-# have to stage the files on the local system for some pre-processing 
+# Unfortunately, the zip format is not splittable and we will have 
+# to stage the files on the local system for some pre-processing 
