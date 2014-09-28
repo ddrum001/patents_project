@@ -10,3 +10,8 @@ def index():
 #		user = user)
 #	countries = { "USA": {code3: "USA", data: [1,2,3]} }
 	return render_template("starter.html")
+
+@app.route('/demo')
+def demo():
+	return render_template("demo.html")
+

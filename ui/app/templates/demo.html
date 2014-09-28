@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highmaps Example</title>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+#wrapper {
+	height: 500px;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+}
+#container {
+	float: left;
+	height: 500px; 
+	width: 700px; 
+	margin: 0;
+}
+#info {
+	float: left;
+	width: 270px;
+	padding-left: 20px;
+	margin: 100px 0 0 0;
+	border-left: 1px solid silver;
+}
+#info h2 {
+	display: inline;
+}
+#info .f32 .flag {
+	vertical-align: bottom !important;
+}
+
+#info h4 {
+	margin: 1em 0 0 0;
+}
+		</style>
+		<script type="text/javascript">
+$(function () {
+//   $.getJSON('http://www.patentlyinnovative.net/filter/', function (jsonPatentData) {
+    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=world-population-history.csv&callback=?', function (csv) {
+
+//		console.log(csv);
+        // Very simple and case-specific CSV string splitting
+        function CSVtoArray(text) {
+            return text.replace(/^"/, '')
+                .replace(/",$/, '')
+                .split('","');
+        };
+
+		//splits the csv by newline
+        csv = csv.split(/\n/);
+
+		/*
+			declares a variable "countries" with an empty list, a mapChart, and countryChart, numRegex to hold numbers, 
+			a quote regex to find quotes, and a categories variable that gets the category names starting at the 5th entry (i.e, the years)
+		*/
+        var countries = {"USA": {/*name: "United States of Awesome",*/ code3: "USA", data: [10000,20000,30000] },
+						 "MEX": {code3: "MEX", data: [30000, 35999, 45000]}
+						},
+            mapChart,
+            countryChart,
+            numRegex = /^[0-9\.]+$/,
+            quoteRegex = /\"/g,
+            categories = CSVtoArray(csv[1]).slice(4);
+
+        // Parse the CSV into arrays, one array for each country starting at the 3rd line where the countries begin
+		// for each line, create a row variable that holds the cleaned up text and data variable to hold population data starting on the 5th entry
+		$.each(csv.slice(2), function (j, line) {
+            var row = CSVtoArray(line),
+                data = row.slice(4);
+//console.log(data)
+
+			// for each data entry, remove the quotes with quoteRegex, if numRegex command says it contains int, use parseInt to get it
+			// otherwise mark it as null.  Finally replace the entry with that number.
+            $.each(data, function (i, val) {
+                
+                val = val.replace(quoteRegex, '');
+                if (numRegex.test(val)) {
+                    val = parseInt(val);
+                } else if (!val) {
+                    val = null;
+                }
+                data[i] = val;
+            });
+			// countries is now filled with the entries, which are indexed on the 3 letter country code, using the general form
+			// {"United States", "USA", {1,2,3,...} }
+ /*           countries[row[1]] = {
+                name: row[0],
+                code3: row[1],
+                data: data
+            };
+ */
+        });
+//		console.log(countries);
+
+        // For each country, use the latest value for current population
+        var data = [];	//create empty data array to hold recent data, not to be confused with countries.data which holds all values
+        for (var code3 in countries) {
+            var value = null,
+                year,
+                itemData = countries[code3].data,
+                i = itemData.length;
+			// for each country get the data array in itemData, i is the length of that array 
+			// then use a while loop to find the first numeric entry and store that values and corresponding year, breaking when done
+            while (i--) {
+                if (typeof itemData[i] === 'number') {
+                    value = itemData[i];
+                    year = categories[i];
+                    break;
+                }
+            }
+            // push the most recent data in json form {country name, country code, value, year}
+			data.push({
+                name: countries[code3].name,
+                code3: code3,
+                value: value,
+                year: year
+            });
+        }
+        
+		// get json data from custom/world refernced in the the script source below, converting it to geojson 
+        var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+
+        // Add lower case codes to the data set for inclusion in the tooltip.pointFormat
+		// for each country in mapData, changes the id to the lowercase version stored in hc-key entry using the this key of jQuery
+		// also changes UK to GB for proper flag matching 
+		$.each(mapData, function () {
+            this.id = this.properties['hc-key']; // for Chart.get()
+            this.flag = this.id.replace('UK', 'GB').toLowerCase();
+        });
+
+        // Wrap point.select to get to the total selected points
+		// it seems the Point is the style of the Highcharts object
+        Highcharts.wrap(Highcharts.Point.prototype, 'select', function (proceed) {
+
+            proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
+			// points holds the number of points the user has clicked on
+            var points = mapChart.getSelectedPoints();
+
+			
+            if (points.length) {
+			// check if any countries are selected, if not no countryChart is displayed
+				// if one country is selected display that country with its flag, otherwise show comparison
+                if (points.length === 1) {
+                    $('#info #flag').attr('class', 'flag ' + points[0].flag);
+                    $('#info h2').html(points[0].name);
+                } else {
+                    $('#info #flag').attr('class', 'flag');
+                    $('#info h2').html('Comparing countries');
+
+                }
+                $('#info .subheader').html('<h4>Historical population</h4><small><em>Shift + Click on map to compare countries</em></small>')
+
+				// this is where countryChart options are chosen, if not already initialized, like animation speed and size
+                if (!countryChart) {
+                    countryChart = $('#country-chart').highcharts({
+                        chart: {
+                            height: 250,
+                            spacingLeft: 0
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        subtitle: {
+                            text: null
+                        },
+                        xAxis: {
+                            tickPixelInterval: 50,
+                            crosshair: true
+                        },
+                        yAxis: {
+                            title: null,
+                            opposite: true
+                        },
+                        tooltip: {
+                            shared: true
+                        },
+                        plotOptions: {
+                            series: {
+                                animation: {
+                                    duration: 500
+                                },
+                                marker: {
+                                    enabled: false
+                                },
+                                threshold: 0,
+                                pointStart: parseInt(categories[10]),
+								pointInterval: 5
+                            }
+                        }
+                    }).highcharts();
+                }
+
+                $.each(points, function (i) {
+                    // Update here is where the chart gets updated, if multiple countries are selected it uses area instead of lines
+					// this is where the countries.data gets loaded into the charts "data" object 
+                    if (countryChart.series[i]) {
+                        countryChart.series[i].update({
+                            name: this.name,
+                            data: countries[this.code3].data,
+                            type: points.length > 1 ? 'line' : 'area'
+                        }, false);
+                    } else {
+                        countryChart.addSeries({
+                            name: this.name,
+                            data: countries[this.code3].data,
+                            type: points.length > 1 ? 'line' : 'area'
+                        }, false);
+                    }
+                });
+                while (countryChart.series.length > points.length) {
+                    countryChart.series[countryChart.series.length - 1].remove(false);
+                }
+                countryChart.redraw();
+
+            } else {
+                $('#info #flag').attr('class', '');
+                $('#info h2').html('');
+                $('#info .subheader').html('');
+                if (countryChart) {
+                    countryChart = countryChart.destroy();
+                }
+            }
+
+            
+
+        });
+        
+        // Initiate the map chart
+		// this is where the map itself is made
+        mapChart = $('#container').highcharts('Map', {
+            
+            title : {
+                text : 'Population history by country'
+            },
+
+            subtitle: {
+                text: 'Source: <a href="http://data.worldbank.org/indicator/SP.POP.TOTL/countries/1W?display=default">The World Bank</a>'
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+			// this is the color map on the bottom of the screen
+            colorAxis: {
+                //type: 'logarithmic', //default is 'linear'
+                endOnTick: false,
+                startOnTick: false,
+                min: 50000
+            },
+			// this seems to be the box of the mouse-over
+            tooltip: {
+                footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
+            },
+			// this is where the heavy-lifting is done! the joinBy merges the 3-letter country codes of the population data with the 
+			// iso-a3 codes from the GeoJson data.  The current population is stored in the 'Map' object's 'data' field while the mapData
+			// is stored in the mapData field
+            series : [{
+                data : data,
+                mapData: mapData,
+                joinBy: ['iso-a3', 'code3'],
+                name: 'Current population',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                states: {
+                    select: {
+                        color: '#a4edba',
+                        borderColor: 'black',
+                        dashStyle: 'shortdot'
+                    }
+                }
+            }]
+        }).highcharts();
+
+        // Pre-select a country for start-up
+        mapChart.get('us').select();
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="../static/js/highcharts.js"></script>
+<script src="../static/js/modules/map.js"></script>
+<script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
+
+<!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
+<link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+
+
+<div id="wrapper">
+	<div id="container"></div>
+	<div id="info">
+		<span class="f32"><span id="flag"></span></span>
+		<h2></h2>
+		<div class="subheader">Click countries to view history</div>
+		<div id="country-chart"></div>
+	</div>
+</div>
+
+	</body>
+</html>
+
