@@ -42,24 +42,78 @@ $(function () {
     $.get('/api/Tokyo', function (patentData) {
 	jData = JSON.parse(patentData);
 	console.log(jData);
-	var countries = jData,
+	})
+    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=world-population-history.csv&callback=?', function (csv) {
+        // Very simple and case-specific CSV string splitting
+	function CSVtoArray(text) {
+            return text.replace(/^"/, '')
+                .replace(/",$/, '')
+                .split('","');
+        };
+
+		//splits the csv by newline
+        csv = csv.split(/\n/);
+
+		/*
+			declares a variable "countries" with an empty list, a mapChart, and countryChart, numRegex to hold numbers, 
+			a quote regex to find quotes, and a categories variable that gets the category names starting at the 5th entry (i.e, the years)
+		*/
+        var countries = {"CA": {code3: "CA", data: [10000,20000,45000] },
+			   "TX": {code3: "TX", data: [5000, 8000, 12000]}
+			  },
+//	var countries = jData,
             mapChart,
             countryChart,
+            numRegex = /^[0-9\.]+$/,
+            quoteRegex = /\"/g,
+            categories = CSVtoArray(csv[1]).slice(4);
+
+        // Parse the CSV into arrays, one array for each country starting at the 3rd line where the countries begin
+		// for each line, create a row variable that holds the cleaned up text and data variable to hold population data starting on the 5th entry
+		$.each(csv.slice(2), function (j, line) {
+            var row = CSVtoArray(line),
+                data = row.slice(4);
+
+			// for each data entry, remove the quotes with quoteRegex, if numRegex command says it contains int, use parseInt to get it
+			// otherwise mark it as null.  Finally replace the entry with that number.
+            $.each(data, function (i, val) {
+                
+                val = val.replace(quoteRegex, '');
+                if (numRegex.test(val)) {
+                    val = parseInt(val);
+                } else if (!val) {
+                    val = null;
+                }
+                data[i] = val;
+            });
+			// countries is now filled with the entries, which are indexed on the 3 letter country code, using the general form
+			// {"United States", "USA", {1,2,3,...} }
+ /*           countries[row[1]] = {
+                name: row[0],
+                code3: row[1],
+                data: data
             };
+ */
         });
 
+        // For each country, use the latest value for current population
         var data = [];	//create empty data array to hold recent data, not to be confused with countries.data which holds all values
         for (var code3 in countries) {
             var value = null,
+                year,
                 itemData = countries[code3].data,
                 i = itemData.length;
+			// for each country get the data array in itemData, i is the length of that array 
+			// then use a while loop to find the first numeric entry and store that values and corresponding year, breaking when done
             while (i--) {
                 if (typeof itemData[i] === 'number') {
                     value = itemData[i];
+                    year = categories[i];
                     break;
                 }
             }
-	    data.push({
+            // push the most recent data in json form {country name, country code, value, year}
+			data.push({
                 name: countries[code3].name,
                 code3: code3,
                 value: value,
@@ -67,6 +121,7 @@ $(function () {
             });
         }
         
+		// get json data from custom/world refernced in the the script source below, converting it to geojson 
         var mapData = Highcharts.geojson(Highcharts.maps['countries/us/us-all']);
 //        var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
 
