@@ -9,4 +9,5 @@ by collecting, cleaning, and aggregating patent information from the
 United States Patent Trade Office (USPTO) using technologies from the
  Hadoop ecosystem.
 
- 
+# Data Pipeline
+![Data Pipeline](figures/pipeline.pdf) 
