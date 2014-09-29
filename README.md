@@ -72,7 +72,7 @@ data is in the nice tabular form.
 
 ![Tabular Data after Hive Cleansing](figures/tabular.png)
 
-After this the data is place into HBase in a highly denormalized form, facilitating
+After this the data is aggregated over different time periods and placed into HBase in a highly denormalized form, facilitating
  real-time queries.  For the front-end, I used the Thrift protocol with the Python Flask 
  library to setup a RESTful API.  For a nice visual user interface (UI), I modified 
 the Java Script templates from Highmaps.  The whole pipeline is shown below.
