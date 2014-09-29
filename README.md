@@ -10,4 +10,4 @@ United States Patent Trade Office (USPTO) using technologies from the
  Hadoop ecosystem.
 
 # Data Pipeline
-![Data Pipeline](figures/pipeline.pdf) 
+![Data Pipeline](figures/pipeline.png) 
