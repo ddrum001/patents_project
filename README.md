@@ -60,7 +60,23 @@ relevant information highlighted, is shown below with pretty-print formatting.
 
 ![JSON Records](figures/json.png)
 
+After processing and staging on the Linux File System of the nodes, the JSON 
+records are placed on the HDFS, partitioned by the year of the patent.  The files 
+are then loaded into Hive tables using the open source serialization/deserialization (SerDe) 
+tools developed by [Roberto Congiu](https://github.com/rcongiu/Hive-JSON-Serde).  
+This SerDe is perfect for my data, which is highly nested and has a very dynamic schema over the various 
+years.  Unlike some of the native Hive tools, this SerDe allows me to ignore the 
+superfluous information, and just extract what's needed.  More so, by taking full 
+advantage of Hive, nearly two decades of data (around 50GB) can be calculated in a batch process of only 20 minutes...very cool!  After this, the
+data is in the nice tabular form.
 
+![Tabular Data after Hive Cleansing](figures/tabular.png)
+
+After this the data is place into HBase in a highly denormalized form, facilitating
+ real-time queries.  For the front-end, I used the Thrift protocol with the Python Flask 
+ library to setup a RESTful API.  For a nice visual user interface (UI), I modified 
+the Java Script templates from Highmaps.  The whole pipeline is shown below.
 
 ![Data Pipeline](figures/pipeline.png) 
+
 
