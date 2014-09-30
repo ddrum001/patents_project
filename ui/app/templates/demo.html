@@ -37,16 +37,12 @@
 }
 		</style>
 		<script type="text/javascript">
+var countries = {{ jsonData | safe }};
+console.log(countries);
 $(function () {
-	var jData;
-    $.get('/api/Tokyo', function (patentData) {
-	jData = JSON.parse(patentData);
-	console.log(jData);
-	var countries = jData,
-            mapChart,
-            countryChart,
-            };
-        });
+//    	$.get('/2012/2014', function (patentData) {
+        var mapChart,
+            countryChart;
 
         var data = [];	//create empty data array to hold recent data, not to be confused with countries.data which holds all values
         for (var code3 in countries) {
@@ -63,45 +59,23 @@ $(function () {
                 name: countries[code3].name,
                 code3: code3,
                 value: value,
-                year: year
             });
-        }
+	}
         
         var mapData = Highcharts.geojson(Highcharts.maps['countries/us/us-all']);
-//        var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
 
-        // Add lower case codes to the data set for inclusion in the tooltip.pointFormat
-		// for each country in mapData, changes the id to the lowercase version stored in hc-key entry using the this key of jQuery
-		// also changes UK to GB for proper flag matching 
-		$.each(mapData, function () {
-            this.id = this.properties['hc-key']; // for Chart.get()
-            this.flag = this.id.replace('UK', 'GB').toLowerCase();
-        });
-
-        // Wrap point.select to get to the total selected points
-		// it seems the Point is the style of the Highcharts object
         Highcharts.wrap(Highcharts.Point.prototype, 'select', function (proceed) {
-
             proceed.apply(this, Array.prototype.slice.call(arguments, 1));
-
-			// points holds the number of points the user has clicked on
             var points = mapChart.getSelectedPoints();
-
-			
             if (points.length) {
-			// check if any countries are selected, if not no countryChart is displayed
-				// if one country is selected display that country with its flag, otherwise show comparison
                 if (points.length === 1) {
                     $('#info #flag').attr('class', 'flag ' + points[0].flag);
                     $('#info h2').html(points[0].name);
                 } else {
                     $('#info #flag').attr('class', 'flag');
                     $('#info h2').html('Comparing states');
-
                 }
                 $('#info .subheader').html('<h4>Patent Production</h4><small><em>Shift + Click on map to compare states</em></small>')
-
-				// this is where countryChart options are chosen, if not already initialized, like animation speed and size
                 if (!countryChart) {
                     countryChart = $('#country-chart').highcharts({
                         chart: {
@@ -137,16 +111,13 @@ $(function () {
                                     enabled: false
                                 },
                                 threshold: 0,
-                                pointStart: parseInt(categories[49]),
-								pointInterval: 2
+                                pointStart: 0,
+				pointInterval: 2
                             }
                         }
                     }).highcharts();
                 }
-
                 $.each(points, function (i) {
-                    // Update here is where the chart gets updated, if multiple countries are selected it uses area instead of lines
-					// this is where the countries.data gets loaded into the charts "data" object 
                     if (countryChart.series[i]) {
                         countryChart.series[i].update({
                             name: this.name,
@@ -165,7 +136,6 @@ $(function () {
                     countryChart.series[countryChart.series.length - 1].remove(false);
                 }
                 countryChart.redraw();
-
             } else {
                 $('#info #flag').attr('class', '');
                 $('#info h2').html('');
@@ -174,13 +144,8 @@ $(function () {
                     countryChart = countryChart.destroy();
                 }
             }
-
         });
-        
-        // Initiate the map chart
-		// this is where the map itself is made
         mapChart = $('#container').highcharts('Map', {
-            
             title : {
                 text : 'Patent Production by State'
             },
@@ -190,14 +155,12 @@ $(function () {
                     verticalAlign: 'bottom'
                 }
             },
-			// this is the color map on the bottom of the screen
             colorAxis: {
                 //type: 'logarithmic', //default is 'linear'
                 endOnTick: false,
                 startOnTick: false,
                 min: 2000
             },
-			// this seems to be the box of the mouse-over
             tooltip: {
                 footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
             },
@@ -220,7 +183,6 @@ $(function () {
                 }
             }]
         }).highcharts();
-    });
 });
 		</script>
 	</head>

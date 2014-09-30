@@ -17,6 +17,11 @@
     <!-- Custom styles for this template -->
     <link href="../static/css/starter-template.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -53,8 +58,24 @@
         <h1>Patently Innovative</h1>
 	<h3>Finding where innovation lives!<h3>	
         <p class="lead">Tracking innovation in different regions by using patent information.</p>
+        <form action="" method="get">
+	   <p>City:  <input type="text" name="city" ></p>
+  	   <p>Start Date: <input type="text" name="date1" class="datepicker"></p>
+	   <p>End Date: <input type="text" name="date2" class="datepicker"></p>
+           <input class="btn"  type="submit" value="Go">
+        </form>
+	<script>
+     	   $(function() {
+    		$( ".datepicker" ).datepicker({
+			      changeMonth: true, //this option for allowing user to select month
+			      changeYear: true, //this option for allowing user to select from year range
+			      yearRange: '2002:2014',
+			      minDate: new Date(2002, 1 - 1, 1), //month is zero-based for some odd reason
+			      maxDate: "-7d"
+			});
+  	   });
+  	</script>
       </div>
-
     </div><!-- /.container -->
 
 
@@ -65,6 +86,16 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+<script type="text/javascript">
+var json_data = {{city_values | safe }};
+console.log(json_data);
+</script>
   </body>
 </html>
 
