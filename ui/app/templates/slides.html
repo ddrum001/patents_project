@@ -44,58 +44,17 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/index">Home</a></li>
             <li><a href="/demo">State Map</a></li>
             <li><a href="/slides">Slides</a></li>	
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
     <div class="container">
-
       <div class="starter-template">
-        <h1>Patently Innovative</h1>
-	<h3>Finding where innovation lives!<h3>	
-        <p class="lead">Tracking innovation in different regions by using patent information.</p>
-        <form action="" method="get">
-        <div class="row">
-           <div class="col-md-3">
-           	<div class="input-group">
-                  <span class="input-group-addon">City:</span>
-                  <input type="text" class="form-control" name="city" value="Sunnyvale">
-                </div>
-	   </div>
-           <div class="col-md-3">
-	   	<div class="input-group">
-		  <span class="input-group-addon">Start Date:</span>
-		  <input type="text" class="form-control datepicker" name="date1" placeholder="Username" value="10/01/2013">
-		</div>
-	   </div>
-           <div class="col-md-3">
-		<div class="input-group">
-		  <span class="input-group-addon">End Date:</span>
-		  <input type="text" class="form-control datepicker" name="date2" placeholder="Username" value="10/01/2014">
-		</div>
-	   </div>
-           <div class="col-md-1"><input class="btn"  type="submit" value="Go"></div>
-           </div>
-           </div>
-        </form>
-	<script>
-     	   $(function() {
-    		$( ".datepicker" ).datepicker({
-			      changeMonth: true, //this option for allowing user to select month
-			      changeYear: true, //this option for allowing user to select from year range
-			      yearRange: '2002:2014',
-			      minDate: new Date(2002, 1 - 1, 1), //month is zero-based for some odd reason
-			      maxDate: "-7d"
-			});
-  	   });
-  	</script>
-<iframe src="//www.slideshare.net/slideshow/embed_code/39712621" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>      </div>
+	<iframe src="//www.slideshare.net/slideshow/embed_code/39712621" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>      </div>
     </div><!-- /.container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -109,11 +68,6 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css">
-
-<script type="text/javascript">
-var json_data = {{city_values | safe }};
-console.log(json_data);
-</script>
   </body>
 </html>
 

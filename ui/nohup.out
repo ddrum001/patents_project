@@ -1,0 +1,326 @@
+2014-09-30 21:31:00 [14411] [INFO] Starting gunicorn 17.5
+2014-09-30 21:31:00 [14411] [INFO] Listening at: http://127.0.0.1:8000 (14411)
+2014-09-30 21:31:00 [14411] [INFO] Using worker: sync
+2014-09-30 21:31:00 [14416] [INFO] Booting worker with pid: 14416
+2014-09-30 21:31:00 [14417] [INFO] Booting worker with pid: 14417
+2014-09-30 21:31:00 [14418] [INFO] Booting worker with pid: 14418
+2014-09-30 21:31:00 [14421] [INFO] Booting worker with pid: 14421
+ * Running on http://0.0.0.0:5000/
+ * Running on http://0.0.0.0:5000/
+2014-09-30 21:31:01 [14417] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/ubuntu/patents_project/ui/run.py", line 3, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 710, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 692, in inner
+    passthrough_errors, ssl_context).serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 486, in make_server
+    passthrough_errors, ssl_context)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 410, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/ubuntu/patents_project/ui/run.py", line 3, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 710, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 692, in inner
+    passthrough_errors, ssl_context).serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 486, in make_server
+    passthrough_errors, ssl_context)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 410, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+2014-09-30 21:31:01 [14417] [INFO] Worker exiting (pid: 14417)
+ * Running on http://0.0.0.0:5000/
+2014-09-30 21:31:01 [14421] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/ubuntu/patents_project/ui/run.py", line 3, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 710, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 692, in inner
+    passthrough_errors, ssl_context).serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 486, in make_server
+    passthrough_errors, ssl_context)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 410, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/ubuntu/patents_project/ui/run.py", line 3, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 710, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 692, in inner
+    passthrough_errors, ssl_context).serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 486, in make_server
+    passthrough_errors, ssl_context)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 410, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+2014-09-30 21:31:01 [14421] [INFO] Worker exiting (pid: 14421)
+ * Running on http://0.0.0.0:5000/
+2014-09-30 21:31:01 [14418] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/ubuntu/patents_project/ui/run.py", line 3, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 710, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 692, in inner
+    passthrough_errors, ssl_context).serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 486, in make_server
+    passthrough_errors, ssl_context)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 410, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/ubuntu/patents_project/ui/run.py", line 3, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 710, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 692, in inner
+    passthrough_errors, ssl_context).serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 486, in make_server
+    passthrough_errors, ssl_context)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 410, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+2014-09-30 21:31:01 [14418] [INFO] Worker exiting (pid: 14418)
+65.87.19.170 - - [30/Sep/2014 21:31:07] "GET /demo HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 200, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 231, in handle_one_request
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 131, in handle_exit
+    sys.exit(0)
+SystemExit: 0
+2014-09-30 21:31:18 [14416] [INFO] Worker exiting (pid: 14416)
+----------------------------------------
+Exception happened during processing of request from ('65.87.19.170', 56699)
+----------------------------------------
+2014-09-30 21:31:18 [14411] [INFO] Shutting down: Master
+2014-09-30 21:31:18 [14411] [INFO] Reason: Worker failed to boot.
+2014-09-30 21:41:24 [14542] [INFO] Starting gunicorn 17.5
+2014-09-30 21:41:24 [14542] [INFO] Listening at: http://127.0.0.1:8000 (14542)
+2014-09-30 21:41:24 [14542] [INFO] Using worker: sync
+2014-09-30 21:41:24 [14547] [INFO] Booting worker with pid: 14547
+2014-09-30 21:41:24 [14548] [INFO] Booting worker with pid: 14548
+2014-09-30 21:41:24 [14549] [INFO] Booting worker with pid: 14549
+2014-09-30 21:41:24 [14550] [INFO] Booting worker with pid: 14550
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+2014-09-30 21:41:26 [14556] [INFO] Starting gunicorn 17.5
+2014-09-30 21:41:26 [14556] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:26 [14556] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:26 [14561] [INFO] Starting gunicorn 17.5
+2014-09-30 21:41:26 [14561] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:26 [14561] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:26 [14562] [INFO] Starting gunicorn 17.5
+2014-09-30 21:41:26 [14562] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:26 [14562] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:26 [14560] [INFO] Starting gunicorn 17.5
+2014-09-30 21:41:26 [14560] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:26 [14560] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:27 [14561] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:27 [14561] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:27 [14556] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:27 [14556] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:27 [14550] [INFO] Worker exiting (pid: 14550)
+2014-09-30 21:41:27 [14549] [INFO] Worker exiting (pid: 14549)
+2014-09-30 21:41:27 [14548] [INFO] Worker exiting (pid: 14548)
+2014-09-30 21:41:27 [14547] [INFO] Worker exiting (pid: 14547)
+2014-09-30 21:41:27 [14542] [INFO] Handling signal: int
+2014-09-30 21:41:27 [14562] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:27 [14562] [ERROR] Retrying in 1 second.
+Exception SystemExit: 0 in <bound method Popen.__del__ of <subprocess.Popen object at 0x7f8bd2e97190>> ignored
+2014-09-30 21:41:27 [14560] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:27 [14560] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:27 [14542] [INFO] Shutting down: Master
+2014-09-30 21:41:28 [14556] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:28 [14561] [INFO] Listening at: http://127.0.0.1:8000 (14561)
+2014-09-30 21:41:28 [14561] [INFO] Using worker: sync
+2014-09-30 21:41:28 [14556] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:28 [14579] [INFO] Booting worker with pid: 14579
+2014-09-30 21:41:28 [14562] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:28 [14562] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:28 [14560] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:28 [14560] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:28 [14580] [INFO] Booting worker with pid: 14580
+2014-09-30 21:41:28 [14581] [INFO] Booting worker with pid: 14581
+2014-09-30 21:41:28 [14582] [INFO] Booting worker with pid: 14582
+2014-09-30 21:41:28 [14561] [INFO] Handling signal: int
+2014-09-30 21:41:28 [14582] [INFO] Worker exiting (pid: 14582)
+2014-09-30 21:41:28 [14579] [INFO] Worker exiting (pid: 14579)
+2014-09-30 21:41:28 [14581] [INFO] Worker exiting (pid: 14581)
+2014-09-30 21:41:28 [14580] [INFO] Worker exiting (pid: 14580)
+2014-09-30 21:41:28 [14561] [INFO] Shutting down: Master
+2014-09-30 21:41:29 [14556] [INFO] Listening at: http://127.0.0.1:8000 (14556)
+2014-09-30 21:41:29 [14556] [INFO] Using worker: sync
+2014-09-30 21:41:29 [14583] [INFO] Booting worker with pid: 14583
+2014-09-30 21:41:29 [14560] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:29 [14560] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:29 [14562] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:29 [14562] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:29 [14584] [INFO] Booting worker with pid: 14584
+2014-09-30 21:41:29 [14585] [INFO] Booting worker with pid: 14585
+2014-09-30 21:41:29 [14586] [INFO] Booting worker with pid: 14586
+2014-09-30 21:41:29 [14556] [INFO] Handling signal: int
+2014-09-30 21:41:29 [14585] [INFO] Worker exiting (pid: 14585)
+2014-09-30 21:41:29 [14586] [INFO] Worker exiting (pid: 14586)
+2014-09-30 21:41:29 [14583] [INFO] Worker exiting (pid: 14583)
+2014-09-30 21:41:29 [14556] [INFO] Shutting down: Master
+2014-09-30 21:41:30 [14562] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2014-09-30 21:41:30 [14562] [ERROR] Retrying in 1 second.
+2014-09-30 21:41:30 [14560] [INFO] Listening at: http://127.0.0.1:8000 (14560)
+2014-09-30 21:41:30 [14560] [INFO] Using worker: sync
+2014-09-30 21:41:30 [14593] [INFO] Booting worker with pid: 14593
+2014-09-30 21:41:30 [14594] [INFO] Booting worker with pid: 14594
+2014-09-30 21:41:30 [14597] [INFO] Booting worker with pid: 14597
+2014-09-30 21:41:30 [14598] [INFO] Booting worker with pid: 14598
+2014-09-30 21:41:30 [14560] [INFO] Handling signal: int
+2014-09-30 21:41:30 [14594] [INFO] Worker exiting (pid: 14594)
+2014-09-30 21:41:30 [14593] [INFO] Worker exiting (pid: 14593)
+2014-09-30 21:41:30 [14598] [INFO] Worker exiting (pid: 14598)
+2014-09-30 21:41:30 [14597] [INFO] Worker exiting (pid: 14597)
+2014-09-30 21:41:30 [14560] [INFO] Shutting down: Master
+2014-09-30 21:41:31 [14562] [ERROR] Can't connect to ('127.0.0.1', 8000)

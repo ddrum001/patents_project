@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Patently Innovative</title>
+		<title>Highmaps Example</title>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<style type="text/css">
@@ -37,45 +37,105 @@
 }
 		</style>
 		<script type="text/javascript">
-var countries = {{ jsonData | safe }};
-console.log(countries);
 $(function () {
-//    	$.get('/2012/2014', function (patentData) {
-        var mapChart,
-            countryChart;
 
-        var data = [];	//create empty data array to hold recent data, not to be confused with countries.data which holds all values
+    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=world-population-history.csv&callback=?', function (csv) {
+
+        // Parse the CSV Data
+        /*Highcharts.data({
+            csv: data,
+            switchRowsAndColumns: true,
+            parsed: function () {
+                console.log(this.columns);
+            }
+        });*/
+
+        // Very simple and case-specific CSV string splitting
+        function CSVtoArray(text) {
+            return text.replace(/^"/, '')
+                .replace(/",$/, '')
+                .split('","');
+        };
+
+        csv = csv.split(/\n/);
+
+        var countries = {},
+            mapChart,
+            countryChart,
+            numRegex = /^[0-9\.]+$/,
+            quoteRegex = /\"/g,
+            categories = CSVtoArray(csv[1]).slice(4);
+
+        // Parse the CSV into arrays, one array each country
+        $.each(csv.slice(2), function (j, line) {
+            var row = CSVtoArray(line),
+                data = row.slice(4);
+
+            $.each(data, function (i, val) {
+                
+                val = val.replace(quoteRegex, '');
+                if (numRegex.test(val)) {
+                    val = parseInt(val);
+                } else if (!val) {
+                    val = null;
+                }
+                data[i] = val;
+            });
+            countries[row[1]] = {
+                name: row[0],
+                code3: row[1],
+                data: data
+            };
+        });
+
+        // For each country, use the latest value for current population
+        var data = [];
         for (var code3 in countries) {
             var value = null,
+                year,
                 itemData = countries[code3].data,
                 i = itemData.length;
+
             while (i--) {
                 if (typeof itemData[i] === 'number') {
                     value = itemData[i];
+                    year = categories[i];
                     break;
                 }
             }
-	    data.push({
+            data.push({
                 name: countries[code3].name,
                 code3: code3,
                 value: value,
+                year: year
             });
-	}
+        }
         
-        var mapData = Highcharts.geojson(Highcharts.maps['countries/us/us-all']);
+        // Add lower case codes to the data set for inclusion in the tooltip.pointFormat
+        var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+        $.each(mapData, function () {
+            this.id = this.properties['hc-key']; // for Chart.get()
+            this.flag = this.id.replace('UK', 'GB').toLowerCase();
+        });
 
+        // Wrap point.select to get to the total selected points
         Highcharts.wrap(Highcharts.Point.prototype, 'select', function (proceed) {
+
             proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
             var points = mapChart.getSelectedPoints();
+
             if (points.length) {
                 if (points.length === 1) {
                     $('#info #flag').attr('class', 'flag ' + points[0].flag);
                     $('#info h2').html(points[0].name);
                 } else {
                     $('#info #flag').attr('class', 'flag');
-                    $('#info h2').html('Comparing states');
+                    $('#info h2').html('Comparing countries');
+
                 }
-                $('#info .subheader').html('<h4>Patent Production</h4><small><em>Shift + Click on map to compare states</em></small>')
+                $('#info .subheader').html('<h4>Historical population</h4><small><em>Shift + Click on map to compare countries</em></small>')
+
                 if (!countryChart) {
                     countryChart = $('#country-chart').highcharts({
                         chart: {
@@ -111,14 +171,18 @@ $(function () {
                                     enabled: false
                                 },
                                 threshold: 0,
-                                pointStart: 2007,
-				pointInterval: 1
+                                pointStart: parseInt(categories[0]),
                             }
                         }
                     }).highcharts();
                 }
+
                 $.each(points, function (i) {
+                    // Update
                     if (countryChart.series[i]) {
+                        /*$.each(countries[this.code3].data, function (pointI, value) {
+                            countryChart.series[i].points[pointI].update(value, false);
+                        });*/
                         countryChart.series[i].update({
                             name: this.name,
                             data: countries[this.code3].data,
@@ -136,6 +200,7 @@ $(function () {
                     countryChart.series[countryChart.series.length - 1].remove(false);
                 }
                 countryChart.redraw();
+
             } else {
                 $('#info #flag').attr('class', '');
                 $('#info h2').html('');
@@ -144,34 +209,45 @@ $(function () {
                     countryChart = countryChart.destroy();
                 }
             }
+
+            
+
         });
+        
+        // Initiate the map chart
         mapChart = $('#container').highcharts('Map', {
+            
             title : {
-                text : 'Patent Production by State'
+                text : 'Population history by country'
             },
+
+            subtitle: {
+                text: 'Source: <a href="http://data.worldbank.org/indicator/SP.POP.TOTL/countries/1W?display=default">The World Bank</a>'
+            },
+
             mapNavigation: {
                 enabled: true,
                 buttonOptions: {
                     verticalAlign: 'bottom'
                 }
             },
+
             colorAxis: {
-                type: 'logarithmic', //default is 'linear'
+                type: 'logarithmic',
                 endOnTick: false,
                 startOnTick: false,
-                min: 5
+                min: 50000
             },
+
             tooltip: {
                 footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
             },
-			// this is where the heavy-lifting is done! the joinBy merges the 3-letter country codes of the population data with the 
-			// iso-a3 codes from the GeoJson data.  The current population is stored in the 'Map' object's 'data' field while the mapData
-			// is stored in the mapData field
+
             series : [{
                 data : data,
                 mapData: mapData,
-                joinBy: ['hc-a2', 'code3'],
-                name: '2008 patents',
+                joinBy: ['iso-a3', 'code3'],
+                name: 'Current population',
                 allowPointSelect: true,
                 cursor: 'pointer',
                 states: {
@@ -183,28 +259,31 @@ $(function () {
                 }
             }]
         }).highcharts();
+
+        // Pre-select a country
+        mapChart.get('us').select();
+    });
 });
 		</script>
 	</head>
 	<body>
-<script src="../static/js/highcharts.js"></script>
-<script src="../static/js/modules/map.js"></script>
+<script src="../../js/highcharts.js"></script>
+<script src="../../js/modules/map.js"></script>
 <script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
-<script src="http://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
 
 <!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
 <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+
 
 <div id="wrapper">
 	<div id="container"></div>
 	<div id="info">
 		<span class="f32"><span id="flag"></span></span>
 		<h2></h2>
-		<div class="subheader">Click states to view patent history</div>
+		<div class="subheader">Click countries to view history</div>
 		<div id="country-chart"></div>
 	</div>
 </div>
 
 	</body>
 </html>
-

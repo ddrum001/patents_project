@@ -11,22 +11,29 @@ def index():
 	date2 = request.args.get('date2', '')
 	print date1
         city_values = return_city(city)
-	return render_template("starter.html", city_values=json.dumps(city_values))
+	return render_template("index.html", city_values=json.dumps(city_values))
+
+@app.route('/slides')
+def slides():
+        return render_template("slides.html")
 
 @app.route('/demo')
 def demo():
-	city_proper_form = {"CA": {"code3": "CA", "data": [10000, 20000]},
-                            "TX": {"code3": "TX", "data": [5000, 12000]}
-                           }
-	return render_template("demo.html", jsonData = json.dumps(city_proper_form))
+	connection = happybase.Connection('54.183.64.227')
+        state_table = connection.table('stateYearTotal')
+	state_json = {}
+	for key, yearData in state_table.scan():
+		state_dict = yearData
+		years = []
+		for key2 in state_dict:
+			years.append(int(state_dict[key2]) )
+		state_json[key] = {"code3": key, "data": years}
+	return render_template("demo.html", jsonData = json.dumps(state_json))
 
 def return_city(city):
 	connection = happybase.Connection('54.183.64.227')
 	city_table = connection.table('city_data')
 	city_dict = city_table.row(city)
 	city_count = city_dict['count:citycount']
-#	city_proper_form = "{\"%s\": {\"%s\", [%s]} }" % ( city, city, city_count )
-	city_proper_form = {"CA": {"code3": "CA", "data": [10000, 20000]} }
-#	return city_table.row(city)
 	return city_proper_form
 
