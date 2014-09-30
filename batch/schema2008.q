@@ -1,5 +1,5 @@
-drop table t2012;
-CREATE EXTERNAL TABLE IF NOT EXISTS t2012 (
+drop table t2008;
+CREATE EXTERNAL TABLE IF NOT EXISTS t2008 (
   uspatentgrant struct<
     usbibliographicdatagrant:struct<
       publicationreference:struct<
@@ -27,4 +27,4 @@ CREATE EXTERNAL TABLE IF NOT EXISTS t2012 (
     >
   >)
 ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-LOCATION '/user/ubuntu/data/patgrant/json/year=2012/';
+LOCATION '/user/ubuntu/data/patgrant/json/year=2008/';

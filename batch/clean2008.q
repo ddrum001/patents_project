@@ -6,6 +6,6 @@ select 	uspatentgrant.usbibliographicdatagrant.parties.applicants.applicant.addr
 	uspatentgrant.usbibliographicdatagrant.publicationreference.documentid.docnumber,
 	uspatentgrant.usbibliographicdatagrant.applicationreference.documentid.date,
 	uspatentgrant.usbibliographicdatagrant.applicationreference.documentid.docnumber
-from t2012; 
+from t2008; 
 
 
