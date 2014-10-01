@@ -22,7 +22,7 @@ do
 done
 echo ""
 echo -n "FROM state${first_year}data"
-for ((year=first_year;year<=current_year;year=year+1))
+for ((year=first_year+1;year<=current_year;year=year+1))
 do
         echo -n " JOIN state${year}data ON (state${year}data.state = state${first_year}data.state)" 
 done
