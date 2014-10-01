@@ -7,6 +7,6 @@ select 	uspatentgrant.usbibliographicdatagrant.usparties.usapplicants.usapplican
 	uspatentgrant.usbibliographicdatagrant.publicationreference.documentid.docnumber,
 	uspatentgrant.usbibliographicdatagrant.applicationreference.documentid.date,
 	uspatentgrant.usbibliographicdatagrant.applicationreference.documentid.docnumber
-from t2014; 
+from second_schema_table; 
 
 
