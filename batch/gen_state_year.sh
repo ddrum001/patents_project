@@ -9,7 +9,7 @@ for ((year=first_year;year<=current_year;year=year+1))
 do
 	echo "drop table state${year}data;"
 	echo "CREATE EXTERNAL TABLE IF NOT EXISTS state${year}data (state STRING,yearCount INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TEXTFILE;"
-	echo "insert overwrite table state${year}data select state, count(state) from statedata where dateapp between ${year}0000 and $(($year+1))0000 group by state;"
+	echo "insert overwrite table state${year}data select state, count(state) from tabular_data where dategrant between ${year}0000 and $(($year+1))0000 group by state;"
 	echo ""
 done
 
@@ -24,7 +24,7 @@ echo ""
 echo -n "FROM state${first_year}data"
 for ((year=first_year+1;year<=current_year;year=year+1))
 do
-        echo -n " JOIN state${year}data ON (state${year}data.state = state${first_year}data.state)" 
+        echo -n " FULL OUTER JOIN state${year}data ON (state${year}data.state = state${first_year}data.state)" 
 done
 echo ';'
 

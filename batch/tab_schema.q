@@ -1,7 +1,7 @@
 drop table tabular_data;
 CREATE EXTERNAL TABLE IF NOT EXISTS tabular_data (
-city STRING,
 state STRING,
+city STRING,
 country STRING,
 orgname STRING,
 dategrant INT,
