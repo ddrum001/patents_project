@@ -58,6 +58,30 @@
         <h1>Patently Innovative</h1>
 	<h3>Finding where innovation lives!<h3>	
         <p class="lead">Tracking innovation in different regions by using patent information.</p>
+        <form action="" method="get">
+        <div class="row">
+           <div class="col-md-3">
+           	<div class="input-group">
+                  <span class="input-group-addon">City:</span>
+                  <input type="text" class="form-control" name="city" value="Sunnyvale">
+                </div>
+	   </div>
+           <div class="col-md-3">
+	   	<div class="input-group">
+		  <span class="input-group-addon">Start Date:</span>
+		  <input type="text" class="form-control datepicker" name="date1" placeholder="Username" value="10/01/2013">
+		</div>
+	   </div>
+           <div class="col-md-3">
+		<div class="input-group">
+		  <span class="input-group-addon">End Date:</span>
+		  <input type="text" class="form-control datepicker" name="date2" placeholder="Username" value="10/01/2014">
+		</div>
+	   </div>
+           <div class="col-md-1"><input class="btn"  type="submit" value="Go"></div>
+           </div>
+           </div>
+        </form>
 	<script>
      	   $(function() {
     		$( ".datepicker" ).datepicker({

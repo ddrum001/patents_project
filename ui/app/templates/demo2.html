@@ -51,7 +51,7 @@ $(function () {
                 i = itemData.length;
             while (i--) {
                 if (typeof itemData[i] === 'number') {
-                    value = itemData[i];
+                    value = itemData[i-1];
                     break;
                 }
             }
@@ -111,7 +111,7 @@ $(function () {
                                     enabled: false
                                 },
                                 threshold: 0,
-                                pointStart: 2005,
+                                pointStart: 2000,
 				pointInterval: 1
                             }
                         }
@@ -147,7 +147,7 @@ $(function () {
         });
         mapChart = $('#container').highcharts('Map', {
             title : {
-                text : 'Patent Production by State'
+                text : 'Patent Production Per 1000 People by State'
             },
             mapNavigation: {
                 enabled: true,
@@ -156,10 +156,10 @@ $(function () {
                 }
             },
             colorAxis: {
-                type: 'logarithmic', //default is 'linear'
+//                type: 'logarithmic', //default is 'linear'
                 endOnTick: false,
                 startOnTick: false,
-                min: 1
+                min: 0
             },
             tooltip: {
                 footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
