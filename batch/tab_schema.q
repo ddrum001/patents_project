@@ -7,7 +7,8 @@ orgname STRING,
 dategrant INT,
 patno INT,
 dateapp INT,
-appno INT
+appno INT,
+class INT
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t'
