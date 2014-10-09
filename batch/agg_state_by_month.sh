@@ -7,7 +7,7 @@ hive -f state_month_schema.q > state_month.tsv | grep -v ^NULL
 
 # as well as HDFS for redundancy
 
-hdfs dfs -mkdir /user/ubuntu/data/agg2/
+hdfs dfs -mkdir /user/ubuntu/data/agg/
 hdfs dfs -put /home/ubuntu/patents_project/batch/state_month.tsv /user/ubuntu/data/agg2/
 
 

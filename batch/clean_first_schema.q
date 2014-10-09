@@ -5,7 +5,8 @@ select 	uspatentgrant.usbibliographicdatagrant.parties.applicants.applicant.addr
 	uspatentgrant.usbibliographicdatagrant.publicationreference.documentid.date,
 	uspatentgrant.usbibliographicdatagrant.publicationreference.documentid.docnumber,
 	uspatentgrant.usbibliographicdatagrant.applicationreference.documentid.date,
-	uspatentgrant.usbibliographicdatagrant.applicationreference.documentid.docnumber
-from first_schema_table; 
+	uspatentgrant.usbibliographicdatagrant.applicationreference.documentid.docnumber,
+	substr(uspatentgrant.usbibliographicdatagrant.classificationnational.mainclassification,1,3)
+from first_schema_class_table; 
 
 
