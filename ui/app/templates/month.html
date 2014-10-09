@@ -91,8 +91,10 @@ $(function () {
                             text: null
                         },
                         xAxis: {
-                            tickPixelInterval: 50,
-                            crosshair: true
+			      type: 'datetime',
+//            		      minRange: 120 * 24 * 3600000 // 120 days
+//                            tickPixelInterval: 50,
+//                            crosshair: true
                         },
                         yAxis: {
                             title: null,
@@ -104,14 +106,16 @@ $(function () {
                         plotOptions: {
                             series: {
                                 animation: {
-                                    duration: 500
+                                    duration: 200
                                 },
                                 marker: {
                                     enabled: false
                                 },
-                                threshold: 0,
-                                pointStart: 2006,
-				pointInterval: 1
+				pointInterval: 31 * 24 * 3600 * 1000,
+            			pointStart: Date.UTC(2005, 0, 1)
+//                                threshold: 0,
+//                                pointStart: 0,
+//				pointInterval: 1
                             }
                         }
                     }).highcharts();
@@ -170,7 +174,7 @@ $(function () {
                 data : data,
                 mapData: mapData,
                 joinBy: ['hc-a2', 'code3'],
-                name: 'Patents granted in 2013',
+                name: 'Patents granted last month',
                 allowPointSelect: true,
                 cursor: 'pointer',
                 states: {

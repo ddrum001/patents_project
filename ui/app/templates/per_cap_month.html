@@ -40,6 +40,7 @@
 var countries = {{ jsonData | safe }};
 console.log(countries);
 $(function () {
+//    	$.get('/2012/2014', function (patentData) {
         var mapChart,
             countryChart;
 
@@ -50,7 +51,7 @@ $(function () {
                 i = itemData.length;
             while (i--) {
                 if (typeof itemData[i] === 'number') {
-                    value = itemData[i];
+                    value = itemData[i-1];
                     break;
                 }
             }
@@ -91,8 +92,9 @@ $(function () {
                             text: null
                         },
                         xAxis: {
-                            tickPixelInterval: 50,
-                            crosshair: true
+				type: 'datetime'
+//                            tickPixelInterval: 50,
+//                            crosshair: true
                         },
                         yAxis: {
                             title: null,
@@ -109,9 +111,11 @@ $(function () {
                                 marker: {
                                     enabled: false
                                 },
-                                threshold: 0,
-                                pointStart: 2006,
-				pointInterval: 1
+				pointInterval: 31 * 24 * 3600 * 1000,
+                                pointStart: Date.UTC(2005, 0, 1)
+//                                threshold: 0,
+//                                pointStart: 2000,
+//				pointInterval: 1
                             }
                         }
                     }).highcharts();
@@ -146,7 +150,7 @@ $(function () {
         });
         mapChart = $('#container').highcharts('Map', {
             title : {
-                text : 'Patent Production by State'
+                text : 'Patent Production Per 1000 People by State'
             },
             mapNavigation: {
                 enabled: true,
@@ -155,10 +159,10 @@ $(function () {
                 }
             },
             colorAxis: {
-                type: 'logarithmic', //default is 'linear'
+//                type: 'logarithmic', //default is 'linear'
                 endOnTick: false,
                 startOnTick: false,
-                min: 1
+                min: 0
             },
             tooltip: {
                 footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
@@ -170,7 +174,7 @@ $(function () {
                 data : data,
                 mapData: mapData,
                 joinBy: ['hc-a2', 'code3'],
-                name: 'Patents granted in 2013',
+                name: 'Patents granted last month',
                 allowPointSelect: true,
                 cursor: 'pointer',
                 states: {

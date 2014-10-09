@@ -2,7 +2,6 @@ from flask import request, render_template, jsonify
 from app import app
 import happybase
 import json
-from collections import OrderedDict
 
 @app.route('/')
 @app.route('/index')
@@ -17,42 +16,70 @@ def index():
 def slides():
         return render_template("slides.html")
 
-@app.route('/demo/pop')
-def demo_pop():
+@app.route('/pop')
+def pop():
         connection = happybase.Connection('54.183.64.227')
-        state_table = connection.table('st_yr4')
-#       row = state_table.row('CA', columns=['yCt:y_2007','yCt:y_2008'])
-#       print row
+        state_table = connection.table('st_mo2')
         state_json = {}
         for key, yearData in state_table.scan():
-                print yearData['yCt:y_2007']
                 years = []
-#               for key2 in state_dict:
-                years.append(float(yearData['yCt:y_2005'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2006'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2007'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2008'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2009'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2010'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2011'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2012'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2013'])/float(yearData['pop:p']) )
-                years.append(float(yearData['yCt:y_2014'])/float(yearData['pop:p']) )
+                for yr in range(2005,2014):
+                        for mo in range(1,13):
+                                dat="%d%02d" % (yr, mo)
+                                if yearData['mCt:y_'+dat] == 'NULL' and dat !='201212':
+                                        years.append(0)
+                                elif dat != '201212':
+                                        years.append(float(yearData['mCt:y_'+dat])/float(yearData['pop:p']) )
+                yr = 2014
+                for mo in range(1,9):
+                        dat="%d%02d" % (yr, mo)
+                        if yearData['mCt:y_'+dat] == 'NULL':
+                                years.append(0)
+                        else:
+                                years.append(float(yearData['mCt:y_'+dat])/float(yearData['pop:p']) )
                 state_json[key] = {"code3": key, "data": years}
         print state_json
-        return render_template("demo2.html", jsonData = json.dumps(state_json))
+        return render_template("per_cap_month.html", jsonData = json.dumps(state_json))
+
+@app.route('/tech')
+def tech():
+        connection = happybase.Connection('54.183.64.227')
+        state_table = connection.table('st_t_yr')
+        state_json = {}
+        for key, yearData in state_table.scan():
+                years = []
+                for yr in range(2005,2013):
+                        if yearData['yCt:y_'+str(yr)] == 'NULL':
+                                years.append(0)
+                        else:
+                                years.append(int(yearData['yCt:y_'+str(yr)]))
+                state_json[key] = {"code3": key, "data": years}
+        print state_json
+        return render_template("tech.html", jsonData = json.dumps(state_json))
+
+@app.route('/techpop')
+def techpop():
+        connection = happybase.Connection('54.183.64.227')
+        state_table = connection.table('st_t_yr')
+        state_json = {}
+        for key, yearData in state_table.scan():
+                years = []
+                for yr in range(2005,2013):
+                        if yearData['yCt:y_'+str(yr)] == 'NULL':
+                                years.append(0)
+                        else:
+                                years.append(100*float(yearData['yCt:y_'+str(yr)])/float(yearData['pop:p']))
+                state_json[key] = {"code3": key, "data": years}
+        print state_json
+        return render_template("techpop.html", jsonData = json.dumps(state_json))
 
 @app.route('/demo')
 def demo():
 	connection = happybase.Connection('54.183.64.227')
         state_table = connection.table('st_yr')
-#	row = state_table.row('CA', columns=['yCt:y_2007','yCt:y_2008'])
-#	print row
 	state_json = {}
 	for key, yearData in state_table.scan():
-#		print yearData['yCt:y_2007']
 		years = []
-#		for key2 in state_dict:
 		for yr in range(2005,2013):
 			if yearData['yCt:y_'+str(yr)] == 'NULL':
 				years.append(0)
@@ -61,4 +88,30 @@ def demo():
 		state_json[key] = {"code3": key, "data": years}
 	print state_json
 	return render_template("demo.html", jsonData = json.dumps(state_json))
+
+@app.route('/month')
+def month():
+        connection = happybase.Connection('54.183.64.227')
+        state_table = connection.table('st_mo')
+        state_json = {}
+        for key, yearData in state_table.scan():
+                years = []
+                for yr in range(2005,2014):
+			for mo in range(1,13):
+				dat="%d%02d" % (yr, mo)
+	                        if yearData['mCt:y_'+dat] == 'NULL' and dat !='201212':
+        	                        years.append(0)
+                	        elif dat != '201212':
+                        	        years.append(int(yearData['mCt:y_'+dat]) )
+		yr = 2014	
+		for mo in range(1,9):
+			dat="%d%02d" % (yr, mo)
+			if yearData['mCt:y_'+dat] == 'NULL':
+				years.append(0)
+			else:
+				years.append(int(yearData['mCt:y_'+dat]) )
+                state_json[key] = {"code3": key, "data": years}
+        print state_json
+        return render_template("month.html", jsonData = json.dumps(state_json))
+
 
